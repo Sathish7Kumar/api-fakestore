@@ -6,25 +6,28 @@ import Cart from './pages/Cart'
 import Navbar from './pages/Navbar'
 import axios from 'axios'
 import Home from './pages/Home'
-const url = "https://fakestoreapi.com/products"
+// const url = "https://fakestoreapi.com/products"
 
 export const FakeContext = createContext()
 
 // useContext - create , provide , useContext
 
-
 const App = () => {
 
   const [data, setdata] = useState([])
   const [cart, setcart] = useState([])
-  const [cartValue, setcartValue] = useState(0)
+  const [cartValue, setcartValue] = useState(cart.length)
 
   useEffect(()=>{
     getData()
   })
 
   const getData = async () =>{
-    const response = await axios.get(url)
+    const response = await axios.get("https://express2-k13e.onrender.com/users/")
+    
+    // post put delete - C E/U D
+
+    // console.log(response.data)
     setdata(response.data)
   }
 

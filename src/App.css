@@ -8,3 +8,13 @@
     font-size: 35px;
     color: antiquewhite;
 }
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 25px;
+}
+th,td{
+    border: 1px solid ;
+}
