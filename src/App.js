@@ -6,7 +6,7 @@ import Cart from './pages/Cart'
 import Navbar from './pages/Navbar'
 import axios from 'axios'
 import Home from './pages/Home'
-// const url = "https://fakestoreapi.com/products"
+const url = "https://fakestoreapi.com/products"
 
 export const FakeContext = createContext()
 
@@ -23,7 +23,7 @@ const App = () => {
   })
 
   const getData = async () =>{
-    const response = await axios.get("https://express2-k13e.onrender.com/users/")
+    const response = await axios.get(url)
     
     // post put delete - C E/U D
 
